@@ -38,9 +38,13 @@ class Bill {
 
     public void calculateBill() {
         // Calculate the electricity bill based on units consumed
+        if ( unitsConsumed < 100 ){
+            billAmount = unitsConsumed * 4.5;
+        }
+        else{
             billAmount = (100 * 4.5) + (unitsConsumed - 100) * 9;
+        }
     }
-
     public double getBillAmount() {
         return billAmount;
     }
@@ -71,8 +75,9 @@ public class ElectricityBillingSystem {
                         // Add a new user
                         System.out.print("Enter user name: ");
                         String name = sc.next();
+                        sc.nextLine();
                         System.out.print("Enter user address: ");
-                        String address = sc.next();
+                        String address = sc.nextLine();
                         System.out.print("Enter user meter ID: ");
                         int meterId =sc.nextInt();
                         users[userCount++] = new User(name, address, meterId);
@@ -84,12 +89,12 @@ public class ElectricityBillingSystem {
 
                 case 2:
                     // Display all users
-                    System.out.println("\nAll Users:");
+                    System.out.println("\nAll Users: \n\n");
                     for (int i = 0; i < userCount; i++) {
                         User user = users[i];
                         System.out.println("Name: " + user.getName());
                         System.out.println("Address: " + user.getAddress());
-                        System.out.println("Meter ID: " + user.getMeterId());
+                        System.out.println("Meter ID: " + user.getMeterId()+"\n\n");
                     }
                     break;
 
