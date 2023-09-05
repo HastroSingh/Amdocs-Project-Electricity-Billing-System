@@ -5,6 +5,8 @@ This is a simple Java program for an Electricity Billing System. It allows you t
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
+- [Tamper Protection](#tamper-protection)
+
 
 ## Introduction
 
@@ -21,3 +23,6 @@ The Electricity Billing System is a console-based Java application that simulate
 - Bill calculation: Calculate electricity bills based on units consumed.
 - Error handling: Handle invalid inputs and display appropriate messages.
 - User-friendly interface: The program has a menu-driven interface for ease of use.
+
+- ## Tamper-Protection
+- The Electricity Billing System includes tamper protection mechanisms to ensure the security and privacy of stored user data. Data is stored privately and protected against unauthorized access or modifications
